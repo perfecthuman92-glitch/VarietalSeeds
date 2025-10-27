@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varietal Seeds - Growing Excellence from Every Seed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #2d5016;
+            --secondary: #5a8f29;
+            --accent: #f1c40f;
+            --light: #f9f9f9;
+            --dark: #333;
+            --gray: #777;
+            --light-gray: #f5f5f5;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-light {
+            background-color: var(--light);
+        }
+
+        .section-gray {
+            background-color: var(--light-gray);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Seeds Section */
+        .seeds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .seed-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .seed-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .seed-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .seed-content {
+            padding: 1.5rem;
+        }
+
+        .seed-title {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .seed-icon {
+            color: var(--primary);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Why Choose Us Section */
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .reason-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reason-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            background-color: var(--light-gray);
+        }
+
+        .faq-question.active {
+            background-color: var(--light-gray);
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 1000px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 0.2rem;
+        }
+
+        .contact-form {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo .logo-icon {
+            color: white;
+        }
+
+        .footer-logo .logo-text {
+            color: white;
+        }
+
+        .footer-heading {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .footer-link i {
+            margin-top: 0.2rem;
+        }
+
+        .footer-link a {
+            color: #ddd;
+        }
+
+        .footer-link a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: var(--box-shadow);
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .btn-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-seedling logo-icon"></i>
+                <span class="logo-text">Varietal Seeds</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#seeds" class="nav-link">Our Seeds</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#why-us" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Growing Excellence from Every Seed</h1>
+            <p>At Varietal Seeds, we believe that strong crops start with the right seeds. Founded in 2023, we provide premium-quality seeds of Wheat, Cotton, Fodder, and Oilseed crops that deliver high yield, resilience, and reliability.</p>
+            <div class="btn-group">
+                <a href="#seeds" class="btn btn-primary">Explore Our Seeds</a>
+                <a href="#contact" class="btn btn-outline">Get Expert Advice</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Varietal Seeds -->
+    <section id="why-us" class="section section-light">
+        <div class="container">
+            <h2 class="text-center">Why Choose Varietal Seeds?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-seedling feature-icon"></i>
+                    <h3>High-Quality, Tested Seeds</h3>
+                    <p>Every seed variety we provide is carefully selected and produced under expert supervision to ensure consistent germination, purity, and performance in local field conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-tie feature-icon"></i>
+                    <h3>Expert Agronomic Guidance</h3>
+                    <p>Our team of agronomists, extensionists, and botanists work closely with farmers, providing practical solutions for soil management, irrigation, pest and weed control, and overall crop improvement.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tractor feature-icon"></i>
+                    <h3>Support Throughout the Crop Cycle</h3>
+                    <p>We stand beside our farmers from sowing to harvest, offering continuous guidance on improving yield and managing challenges during each stage of crop growth.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Easy and Quick Support</h3>
+                    <p>Whether you need seed consultation or on-field advice, our team is always just a call or message away, ensuring help reaches you when it matters most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="section section-gray">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Varietal Seeds</h2>
+                    <p>Founded in 2023, Varietal Seeds emerged with a strong commitment to empower Pakistan's farmers by providing high-quality, locally adapted seed varieties and practical agronomic consultancy.</p>
+                    <p>We recognized that while many farmers work tirelessly to feed the nation, they often face challenges like poor seed quality, unpredictable weather, pest infestations, and lack of proper technical guidance.</p>
+                    <p>That's where Varietal Seeds steps in, bridging the gap between science and soil. Our company offers not just premium seed varieties but also expert advice tailored to each farmer's specific region, soil, and crop conditions.</p>
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Farm field">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Seeds -->
+    <section id="seeds" class="section section-light">
+        <div class="container">
+            <h2 class="text-center">Our Seeds</h2>
+            <p class="text-center">At Varietal Seeds, we believe that every successful harvest begins with the right seed. That's why we provide carefully selected, scientifically tested, and field-proven seed varieties to meet the needs of farmers across Pakistan.</p>
+            
+            <div class="seeds-grid">
+                <div class="seed-card">
+                    <div class="seed-image" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80');"></div>
+                    <div class="seed-content">
+                        <div class="seed-title">
+                            <i class="fas fa-wheat-alt seed-icon"></i>
+                            <h3>Wheat Varieties</h3>
+                        </div>
+                        <p>Our wheat seeds are known for their high yield, drought tolerance, and resistance to rust diseases. Each variety is carefully adapted to local soil and climatic conditions.</p>
+                        <ul>
+                            <li>Excellent grain quality and milling performance</li>
+                            <li>Strong resistance against leaf and stem rust</li>
+                            <li>Suitable for both irrigated and semi-arid zones</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="seed-card">
+                    <div class="seed-image" style="background-image: url('https://images.unsplash.com/photo-1589122357153-4ac6f326589?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="seed-content">
+                        <div class="seed-title">
+                            <i class="fas fa-cloud seed-icon"></i>
+                            <h3>Cotton Varieties</h3>
+                        </div>
+                        <p>Our cotton seed varieties are designed to meet the modern challenges of pest pressure, water scarcity, and fiber quality.</p>
+                        <ul>
+                            <li>High lint percentage and excellent fiber strength</li>
+                            <li>Resistance to major insect pests</li>
+                            <li>Early maturity to reduce exposure to late-season pest attacks</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="seed-card">
+                    <div class="seed-image" style="background-image: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="seed-content">
+                        <div class="seed-title">
+                            <i class="fas fa-leaf seed-icon"></i>
+                            <h3>Fodder Crops</h3>
+                        </div>
+                        <p>Our fodder crop seeds are known for their fast growth, high nutritional content, and multi-cut potential.</p>
+                        <ul>
+                            <li>High protein and digestibility levels</li>
+                            <li>Fast regrowth after each cut</li>
+                            <li>Suitable for both irrigated and rain-fed systems</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="seed-card">
+                    <div class="seed-image" style="background-image: url('https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="seed-content">
+                        <div class="seed-title">
+                            <i class="fas fa-seedling seed-icon"></i>
+                            <h3>Oilseed Crops</h3>
+                        </div>
+                        <p>Our oilseed range provides farmers with profitable alternatives for crop rotation and soil improvement.</p>
+                        <ul>
+                            <li>High oil yield and premium quality</li>
+                            <li>Excellent resistance to pests and lodging</li>
+                            <li>Improves soil fertility when rotated with cereal crops</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy & Services -->
+    <section id="services" class="section section-gray">
+        <div class="container">
+            <h2 class="text-center">Consultancy & Services</h2>
+            <p class="text-center">At Varietal Seeds, we believe that farming success depends not only on good seeds but also on the right guidance at every step of the crop journey.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">1</div>
+                    <h3>Soil Testing and Fertility Management</h3>
+                    <p>Healthy soil is the foundation of a successful crop. We provide soil sampling, testing, and fertility assessment services to help farmers understand the nutrient status of their land.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">2</div>
+                    <h3>Pest and Disease Management</h3>
+                    <p>Crop losses from pests and diseases can drastically reduce profits. Our consultants identify early symptoms and guide farmers on safe, effective control methods.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">3</div>
+                    <h3>Weed Control Strategies</h3>
+                    <p>Weeds compete with crops for nutrients, water, and sunlight. We offer practical weed identification and control programs tailored to different crop types.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">4</div>
+                    <h3>Irrigation Management</h3>
+                    <p>Water is one of the most valuable farm resources. We help farmers design and manage irrigation schedules based on soil type, crop stage, and weather conditions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">5</div>
+                    <h3>Crop Lifecycle Guidance</h3>
+                    <p>From sowing to harvest, our experts stay connected with farmers through every growth stage, providing timely advice on fertilization, irrigation, and pest control.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">6</div>
+                    <h3>Yield Improvement and Farm Optimization</h3>
+                    <p>We help farmers unlock their field's full potential through yield analysis, field layout planning, and varietal recommendations suited to their region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-light">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <p class="text-center">Find answers to common questions about our seeds, services, and support.</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What types of seeds does Varietal Seeds offer?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer premium-quality seeds for Wheat, Cotton, Fodder, and Oilseed crops such as Canola, Super Raya, and Berseem. All our seeds are tested for germination, purity, and adaptability to local soil and climatic conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I choose the right seed variety for my area?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our agronomists and field experts can help you select the most suitable seed variety based on your soil type, water availability, and regional weather. You can contact us through phone, WhatsApp, or email for free guidance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your seeds tested or certified for quality?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Every batch of Varietal Seeds undergoes strict quality testing and field trials before distribution. We ensure high germination rates, disease resistance, and consistent performance across various field conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you provide consultancy services along with seed sales?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We believe in complete farmer support, not just selling seeds. Our consultancy services include soil testing, pest and weed management, irrigation planning, fertilizer guidance, and yield improvement strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can your team visit my farm to provide on-ground advice?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our agronomists, extensionists, and botanists regularly conduct field visits in different areas to observe crop conditions and provide practical recommendations. You can also share photos or videos via WhatsApp for remote assistance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What makes Varietal Seeds different from other suppliers?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We combine quality products with expert advice and easy accessibility. Our team is available throughout the crop cycle, offering practical, farmer-focused support. We don't just sell seeds, we build long-term partnerships for better yields.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How do I place an order for seeds?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can place your order by calling us at +92-313-8684140, messaging us on WhatsApp (+92-304-7433742), or emailing info@varietalseeds.com. Our team will guide you through availability, prices, and delivery options.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you deliver seeds across Pakistan?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide seed delivery services to most agricultural regions of Pakistan. Delivery timelines depend on your location and crop season. Contact us for specific details.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I get guidance even if I didn't buy seeds from Varietal Seeds?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Our goal is to support farmers' success. Even if you're not using our seeds yet, we are happy to provide general advice and consultation to help improve your crop health and productivity.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I contact your experts for a quick consultation?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can reach our consultants directly via WhatsApp (+92-304-7433742) for instant support, or email us at varietalseed@gmail.com. You can also visit our office during business hours for in-person assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise -->
+    <section class="section section-gray">
+        <div class="container text-center">
+            <h2>Our Promise</h2>
+            <p>We are not just seed suppliers, we are your partners in productivity. With Varietal Seeds, you don't just grow crops, you grow confidence, consistency, and success.</p>
+            <p>We promise to continue working side by side with farmers, providing not just the best seeds, but also the right knowledge, support, and care. With Varietal Seeds, you're not just buying a product, you're investing in trust, growth, and partnership.</p>
+            <a href="#contact" class="btn btn-primary">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">At Varietal Seeds, we value every question, every call, and every connection with our farmers. Whether you're seeking guidance about seed selection, crop management, or technical support, our team is always ready to assist you.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>We're Here to Help</h3>
+                    <p>Our consultants and agronomists are available during office hours to answer your questions about seed varieties, pest control, irrigation, and more.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h4>Our Address</h4>
+                            <p>Varietal Seeds<br>Madina Town, Tell Wala,<br>Mandi Yazman, Bahawalpur, Pakistan.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>General Inquiries & Sales:<br>varietalseed@gmail.com<br>info@varietalseeds.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>
+                            <h4>Call or WhatsApp</h4>
+                            <p>Phone: +92-313-8684140<br>WhatsApp: +92-304-7433742</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday, Friday: 9:00 AM, 5:00 PM<br>Saturday: 9:00 AM, 1:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Your Phone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling logo-icon"></i>
+                        <span class="logo-text">Varietal Seeds</span>
+                    </div>
+                    <p>We are not just seed suppliers, we are your partners in productivity. With Varietal Seeds, you don't just grow crops, you grow confidence, consistency, and success.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#home">Home</a></li>
+                        <li class="footer-link"><a href="#about">About Us</a></li>
+                        <li class="footer-link"><a href="#seeds">Our Seeds</a></li>
+                        <li class="footer-link"><a href="#services">Services</a></li>
+                        <li class="footer-link"><a href="#faq">FAQ</a></li>
+                        <li class="footer-link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Our Seeds</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#seeds">Wheat Varieties</a></li>
+                        <li class="footer-link"><a href="#seeds">Cotton Varieties</a></li>
+                        <li class="footer-link"><a href="#seeds">Fodder Crops</a></li>
+                        <li class="footer-link"><a href="#seeds">Oilseed Crops</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-container">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Madina Town, Tell Wala, Mandi Yazman, Bahawalpur, Pakistan</span>
+                        </li>
+                        <li class="footer-link">
+                            <i class="fas fa-phone"></i>
+                            <span>+92-313-8684140</span>
+                        </li>
+                        <li class="footer-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@varietalseeds.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Varietal Seeds. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.querySelector('.mobile-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    a.classList.remove('active');
+                });
+                
+                // Open current FAQ item if it wasn't active
+                if (!isActive) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
