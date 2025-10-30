@@ -111,7 +111,7 @@
         }
 
         .text-center h2::after {
-            /*  left: 50%;*/
+            left: 50%;
             transform: translateX(-50%);
         }
 
@@ -179,6 +179,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
+            position: relative;
         }
 
         .logo {
@@ -192,7 +193,7 @@
             font-size: 1.8rem;
         }
 
-	.logo-img {
+        .logo-img {
             height: 50px;
             width: auto;
         }
@@ -201,6 +202,11 @@
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
         }
 
         .nav-menu {
@@ -229,10 +235,11 @@
             width: 100%;
         }
 
-fas         .mobile-toggle {
+        .mobile-toggle {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--primary);
         }
 
         /* Hero Section */
@@ -339,13 +346,12 @@ fas         .mobile-toggle {
 
         .seed-icon {
             color: var(--primary);
-    	    HEIGHT: 28PX;
-
+            height: 28px;
         }
 
-	.seed-margin {
-	    margin: 20px;
-	}
+        .seed-margin {
+            margin: 20px;
+        }
 
         /* Services Section */
         .services-grid {
@@ -613,25 +619,26 @@ fas         .mobile-toggle {
         }
 
         @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
             .nav-menu {
                 display: none;
                 position: absolute;
                 top: 100%;
-                left: 0;
-                width: 100%;
+                right: 0;
+                width: 200px;
                 background-color: white;
                 flex-direction: column;
                 padding: 1rem 0;
                 box-shadow: var(--box-shadow);
-                text-align: center;
+                text-align: left;
+                z-index: 1000;
             }
 
             .nav-menu.active {
                 display: flex;
-            }
-
-            .mobile-toggle {
-                display: block;
             }
 
             .hero h1 {
@@ -672,6 +679,9 @@ fas         .mobile-toggle {
                 <span class="logo-text">Varietal Seed</span>
             </div>
             <nav>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -681,9 +691,6 @@ fas         .mobile-toggle {
                     <li><a href="#faq" class="nav-link">FAQ</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </nav>
         </div>
     </header>
@@ -941,7 +948,7 @@ fas         .mobile-toggle {
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>You can place your order by calling us at +92-313-8684140, messaging us on WhatsApp (+92-304-7433742), or emailing info@varietalseed.com. Our team will guide you through availability, prices, and delivery options.</p>
+                        <p>You can place your order by calling us at +92-313-8684110, messaging us on WhatsApp (+92-304-7433742), or emailing info@varietalseed.com. Our team will guide you through availability, prices, and delivery options.</p>
                     </div>
                 </div>
                 
@@ -1019,7 +1026,7 @@ fas         .mobile-toggle {
                         <i class="fas fa-phone contact-icon"></i>
                         <div>
                             <h4>Call or WhatsApp</h4>
-                            <p>Phone: +92-313-8684140<br>WhatsApp: +92-304-7433742</p>
+                            <p>Phone: +92-313-8684110<br>WhatsApp: +92-304-7433742</p>
                         </div>
                     </div>
                     
@@ -1114,7 +1121,7 @@ fas         .mobile-toggle {
                         </li>
                         <li class="footer-link">
                             <i class="fas fa-phone"></i>
-                            <span>+92-313-8684140</span>
+                            <span>+92-313-8684110</span>
                         </li>
                         <li class="footer-link">
                             <i class="fas fa-envelope"></i>
@@ -1192,6 +1199,3 @@ fas         .mobile-toggle {
     </script>
 </body>
 </html>
-
-
-
