@@ -111,7 +111,7 @@
         }
 
         .text-center h2::after {
-            left: 50%;
+            /*  left: 50%;*/
             transform: translateX(-50%);
         }
 
@@ -339,7 +339,13 @@ fas         .mobile-toggle {
 
         .seed-icon {
             color: var(--primary);
+    	    HEIGHT: 28PX;
+
         }
+
+	.seed-margin {
+	    margin: 20px;
+	}
 
         /* Services Section */
         .services-grid {
@@ -694,35 +700,6 @@ fas         .mobile-toggle {
         </div>
     </section>
 
-    <!-- Why Choose Varietal Seeds -->
-    <section id="why-us" class="section section-light">
-        <div class="container">
-            <h2 class="text-center">Why Choose Varietal Seed?</h2>
-            <div class="features">
-                <div class="feature-card">
-                    <i class="fas fa-seedling feature-icon"></i>
-                    <h3>High Quality, Tested Seeds</h3>
-                    <p>Every seed variety we provide is carefully selected and produced under expert supervision to ensure consistent germination, purity, and performance in local field conditions.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-user-tie feature-icon"></i>
-                    <h3>Expert Agronomic Guidance</h3>
-                    <p>Our team of agronomists, extensionists, and botanists work closely with farmers, providing practical solutions for soil management, irrigation, pest and weed control, and overall crop improvement.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-tractor feature-icon"></i>
-                    <h3>Support Throughout the Crop Cycle</h3>
-                    <p>We stand beside our farmers from sowing to harvest, offering continuous guidance on improving yield and managing challenges during each stage of crop growth.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset feature-icon"></i>
-                    <h3>Easy and Quick Support</h3>
-                    <p>Whether you need seed consultation or on field advice, our team is always just a call or message away, ensuring help reaches you when it matters most.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- About Us -->
     <section id="about" class="section section-gray">
         <div class="container">
@@ -756,7 +733,7 @@ fas         .mobile-toggle {
                             <h3>Wheat Varieties</h3>
                         </div>
                         <p>Our wheat seeds are known for their high yield, drought tolerance, and resistance to rust diseases. Each variety is carefully adapted to local soil and climatic conditions.</p>
-                        <ul>
+                        <ul class="seed-margin">
                             <li>Excellent grain quality and milling performance</li>
                             <li>Strong resistance against leaf and stem rust</li>
                             <li>Suitable for both irrigated and semi arid zones</li>
@@ -772,7 +749,7 @@ fas         .mobile-toggle {
                             <h3>Cotton Varieties</h3>
                         </div>
                         <p>Our cotton seed varieties are designed to meet the modern challenges of pest pressure, water scarcity, and fiber quality.</p>
-                        <ul>
+                        <ul class="seed-margin">
                             <li>High lint percentage and excellent fiber strength</li>
                             <li>Resistance to major insect pests</li>
                             <li>Early maturity to reduce exposure to late season pest attacks</li>
@@ -788,7 +765,7 @@ fas         .mobile-toggle {
                             <h3>Fodder Crops</h3>
                         </div>
                         <p>Our fodder crop seeds are known for their fast growth, high nutritional content, and multi cut potential.</p>
-                        <ul>
+                        <ul class="seed-margin">
                             <li>High protein and digestibility levels</li>
                             <li>Fast regrowth after each cut</li>
                             <li>Suitable for both irrigated and rain fed systems</li>
@@ -804,7 +781,7 @@ fas         .mobile-toggle {
                             <h3>Oilseed Crops</h3>
                         </div>
                         <p>Our oilseed range provides farmers with profitable alternatives for crop rotation and soil improvement.</p>
-                        <ul>
+                        <ul class="seed-margin">
                             <li>High oil yield and premium quality</li>
                             <li>Excellent resistance to pests and lodging</li>
                             <li>Improves soil fertility when rotated with cereal crops</li>
@@ -856,6 +833,36 @@ fas         .mobile-toggle {
                     <div class="service-number">6</div>
                     <h3>Yield Improvement and Farm Optimization</h3>
                     <p>We help farmers unlock their field's full potential through yield analysis, field layout planning, and varietal recommendations suited to their region.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Why Choose Varietal Seeds -->
+    <section id="why-us" class="section section-light">
+        <div class="container">
+            <h2 class="text-center">Why Choose Varietal Seed?</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-seedling feature-icon"></i>
+                    <h3>High Quality, Tested Seeds</h3>
+                    <p>Every seed variety we provide is carefully selected and produced under expert supervision to ensure consistent germination, purity, and performance in local field conditions.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-tie feature-icon"></i>
+                    <h3>Expert Agronomic Guidance</h3>
+                    <p>Our team of agronomists, extensionists, and botanists work closely with farmers, providing practical solutions for soil management, irrigation, pest and weed control, and overall crop improvement.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tractor feature-icon"></i>
+                    <h3>Support Throughout the Crop Cycle</h3>
+                    <p>We stand beside our farmers from sowing to harvest, offering continuous guidance on improving yield and managing challenges during each stage of crop growth.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset feature-icon"></i>
+                    <h3>Easy and Quick Support</h3>
+                    <p>Whether you need seed consultation or on field advice, our team is always just a call or message away, ensuring help reaches you when it matters most.</p>
                 </div>
             </div>
         </div>
@@ -1185,7 +1192,6 @@ fas         .mobile-toggle {
     </script>
 </body>
 </html>
-
 
 
 
